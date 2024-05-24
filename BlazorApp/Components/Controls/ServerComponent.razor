@@ -1,9 +1,9 @@
-﻿<p>
-    @status at @DateTime.Now
-</p>
+﻿<div data-name="@server.Name" data-status="Server is @(server.IsOnline?"online":"offline")">
+    @server.Name is in @server.City that is @(server.IsOnline?"online":"offline")
+</div>
 
 
 @code {
-    private string status = "Server is offline.";
+    private Server server = new Server { Name = "Server 1", City = "Toronto" };
 
 }
